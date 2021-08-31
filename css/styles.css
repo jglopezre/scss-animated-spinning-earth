@@ -1,0 +1,138 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  position: relative;
+  background-image: radial-gradient(#224156, #162b39, #0b161c);
+  color: white;
+}
+
+.clouds, .map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.clouds {
+  width: 440px;
+  height: 440px;
+}
+.clouds > img {
+  width: 440px;
+  height: 440px;
+  position: relative;
+  z-index: 20;
+}
+
+.map {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  box-shadow: -60px -40px 0 0 rgba(0, 0, 0, 0.1) inset, -140px -60px 0 0 rgba(0, 0, 0, 0.1) inset, 5px 5px 0 0 rgba(255, 255, 255, 0.2) inset;
+  background-image: url(../images/map.png);
+  background-size: cover;
+  animation: spinning-earth 35s infinite linear;
+}
+
+@keyframes spinning-earth {
+  from {
+    background-position: left center;
+  }
+  to {
+    background-position: -960px center;
+  }
+}
+/*ESTRELLAS*/
+.star {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.star:nth-child(2) {
+  top: 85%;
+  left: 50%;
+}
+
+.star:nth-child(3) {
+  top: 25%;
+  left: 70%;
+}
+
+.star:nth-child(4) {
+  top: 20%;
+  left: 15%;
+}
+
+.star:nth-child(5) {
+  top: 80%;
+  left: 80%;
+}
+
+.star:nth-child(6) {
+  top: 90%;
+  left: 20%;
+}
+
+.star:nth-child(7) {
+  top: 70%;
+  left: 90%;
+}
+
+.star:nth-child(8) {
+  top: 10%;
+  left: 60%;
+}
+
+.star:nth-child(9) {
+  top: 40%;
+  left: 75%;
+}
+
+.star:nth-child(10) {
+  top: 50%;
+  left: 25%;
+}
+
+.star:nth-child(11) {
+  top: 30%;
+  left: 30%;
+}
+
+.star:nth-child(2n) {
+  animation: pair-stars 2s infinite;
+}
+
+@keyframes pair-stars {
+  0%, 90% {
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 16px 16px rgba(255, 255, 255, 0.3);
+  }
+}
+.star:nth-child(2n+1) {
+  animation: unpair-stars 2s infinite;
+}
+
+@keyframes unpair-stars {
+  0%, 35%, 50%, 100% {
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.3);
+  }
+  45% {
+    box-shadow: 0 0 16px 16px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
